@@ -21,6 +21,6 @@ You can add feature/release/hotfix branches the same way. This keeps everything 
 
 ## Clone elsewhere
 
-On another machine, copy `.remotes/selfhost.git` and run `git clone /path/to/selfhost.git RunescapeCombatBot` to avoid GitHub entirely.
+On another machine, copy `.remotes/selfhost.git` and run `git clone /path/to/selfhost.git RunescapeSimulator` to avoid GitHub entirely.
 
 Feel free to rename the `.remotes` folder or host it on NAS/USB when you want a portable “server”.

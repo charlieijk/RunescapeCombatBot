@@ -1,4 +1,4 @@
-# RunescapeCombatBot GitFlow
+# RunescapeSimulator GitFlow
 
 This workflow keeps the combat bot stable while letting you iterate quickly on new features, server integrations, and fixes.
 

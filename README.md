@@ -1,4 +1,4 @@
-# RunescapeCombatBot
+# RunescapeSimulator
 
 This project showcases a modular combat bot for RuneScape private servers. It includes a Gradle-based build, documentation, and a stub of the KS Bot API so you can compile/run the script locally without the proprietary client.
 
@@ -54,4 +54,4 @@ The Kronos launcher now falls back to a local client jar when the legacy update 
 
 ## License
 
-RunescapeCombatBot is distributed under the [MIT License](LICENSE). See the license file for details before redistributing or embedding the code.
+RunescapeSimulator is distributed under the [MIT License](LICENSE). See the license file for details before redistributing or embedding the code.
