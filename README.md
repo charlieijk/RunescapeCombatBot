@@ -1,6 +1,12 @@
 # RunescapeSimulator
 
-This project showcases a modular combat bot for RuneScape private servers. It includes a Gradle-based build, documentation, and a stub of the KS Bot API so you can compile/run the script locally without the proprietary client.
+A modular combat bot framework for RuneScape private servers, featuring a task-based architecture and RuneLite plugin integration. This project combines a standalone combat bot with the Kronos RSPS (184 protocol) to provide a complete development and testing environment.
+
+## Project Structure
+
+- **Combat Bot** (`src/main/java/bot/`) - Standalone task-based combat framework with inventory management, NPC targeting, looting, and special attack handling
+- **Kronos Integration** (`kronos/`) - Submodule containing the Kronos server and RuneLite-based client with Combat Bot plugin
+- **API Stubs** (`src/main/java/ks/`) - Minimal KS Bot API implementation for local compilation and testing
 
 ## Requirements
 
