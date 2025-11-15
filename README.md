@@ -40,6 +40,18 @@ The runner seeds the context with sample NPCs, inventory, and ground items, then
 
 Open the repository in IntelliJ IDEA, Eclipse, or VS Code and import it as a Gradle project to get code completion and task runners automatically.
 
+## Kronos Client Setup
+
+The Kronos launcher now falls back to a local client jar when the legacy update site is unreachable. Drop your compiled client into `kronos/Kronos-master/local-client/client.jar`. When you run `arch -x86_64 ./gradlew :kronos-launcher:run`, it will pick up that jar without attempting a download.
+
+### Combat Bot Plugin
+
+1. Start the Kronos server with the x86 Temurin 11 JDK:  
+   `cd kronos/Kronos-master && export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home && export JAVA_TOOL_OPTIONS="--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED -Djdk.attach.allowAttachSelf=true" && arch -x86_64 ./gradlew :kronos-server:run --console=plain`
+2. Launch the client (which now uses your local jar):  
+   `cd kronos/Kronos-master && export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home && export JAVA_TOOL_OPTIONS="--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED -Djdk.attach.allowAttachSelf=true" && arch -x86_64 ./gradlew :kronos-launcher:run --console=plain`
+3. Inside the RuneLite sidebar, open the new **Combat Bot** panel and click **Start** to begin running `CombatBot`. The plugin mirrors live inventory/NPC/health data from the client into the existing task framework so the bot behaves just like it did in the demo runner, but now inside the Kronos GUI.
+
 ## License
 
 RunescapeCombatBot is distributed under the [MIT License](LICENSE). See the license file for details before redistributing or embedding the code.

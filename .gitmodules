@@ -1,0 +1,3 @@
+[submodule "kronos"]
+	path = kronos
+	url = https://github.com/charlieijk/CharliesKronos.git

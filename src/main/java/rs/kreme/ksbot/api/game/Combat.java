@@ -85,6 +85,10 @@ public class Combat {
         this.specEnabled = true;
     }
 
+    public void setSpecEnabled(boolean specEnabled) {
+        this.specEnabled = specEnabled;
+    }
+
     public AttackStyle getAttackStyle() {
         return attackStyle;
     }
