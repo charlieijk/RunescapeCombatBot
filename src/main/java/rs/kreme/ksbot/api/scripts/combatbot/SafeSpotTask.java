@@ -1,5 +1,6 @@
 package rs.kreme.ksbot.api.scripts.combatbot;
 
+import rs.kreme.ksbot.api.game.Combat;
 import rs.kreme.ksbot.api.scripts.task.Task;
 import rs.kreme.ksbot.api.wrappers.KSObject;
 import rs.kreme.ksbot.api.queries.ObjectQuery;

@@ -84,6 +84,10 @@ public class CombatBot extends TaskScript {
     public void incrementKillCount() {
         killCount++;
     }
+
+    public int getKillCount() {
+        return killCount;
+    }
     
     // Getter methods for configuration variables
     public String[] getTargetNpcNames() {
