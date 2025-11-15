@@ -1,6 +1,10 @@
 package rs.kreme.ksbot.api.game;
 
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 import rs.kreme.ksbot.api.queries.NPCQuery;
 import rs.kreme.ksbot.api.wrappers.KSNPC;
 
@@ -15,6 +19,7 @@ public class Combat {
     private int specEnergy = 0;
     private boolean specEnabled;
     private AttackStyle attackStyle = AttackStyle.ACCURATE;
+    private final List<KSNPC> attackableNpcs = new ArrayList<>();
 
     public boolean inCombat() {
         return inCombat;
@@ -44,8 +49,24 @@ public class Combat {
         return inCombat && npc != null;
     }
 
+    public void setAttackableNpcs(List<KSNPC> npcs) {
+        attackableNpcs.clear();
+        if (npcs != null) {
+            attackableNpcs.addAll(npcs);
+        }
+    }
+
     public NPCQuery getAttackableNPC(String... targetNames) {
-        return new NPCQuery(Collections.emptyList());
+        if (targetNames == null || targetNames.length == 0) {
+            return new NPCQuery(attackableNpcs);
+        }
+        List<String> filters = Arrays.stream(targetNames)
+                .map(name -> name.toLowerCase(Locale.ROOT))
+                .collect(Collectors.toList());
+        List<KSNPC> matches = attackableNpcs.stream()
+                .filter(npc -> filters.contains(npc.getName().toLowerCase(Locale.ROOT)))
+                .collect(Collectors.toList());
+        return new NPCQuery(matches);
     }
 
     public int getSpecEnergy() {

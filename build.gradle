@@ -27,3 +27,10 @@ tasks.withType(JavaCompile).configureEach {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.register('runCombatBot', JavaExec) {
+    group = 'application'
+    description = 'Runs the demo combat bot against the stubbed context'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'rs.kreme.ksbot.api.scripts.combatbot.CombatBotRunner'
+}

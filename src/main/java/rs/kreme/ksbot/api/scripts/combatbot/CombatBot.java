@@ -125,4 +125,41 @@ public class CombatBot extends TaskScript {
     public boolean isUseAntiBan() {
         return useAntiBan;
     }
+
+    // Setter methods to allow runtime customization
+    public void setTargetNpcNames(String[] targetNpcNames) {
+        this.targetNpcNames = targetNpcNames;
+    }
+
+    public void setEatAtHealthPercent(int eatAtHealthPercent) {
+        this.eatAtHealthPercent = eatAtHealthPercent;
+    }
+
+    public void setUseSpecialAttack(boolean useSpecialAttack) {
+        this.useSpecialAttack = useSpecialAttack;
+    }
+
+    public void setSpecialAttackEnergyThreshold(int specialAttackEnergyThreshold) {
+        this.specialAttackEnergyThreshold = specialAttackEnergyThreshold;
+    }
+
+    public void setFoodNames(String[] foodNames) {
+        this.foodNames = foodNames;
+    }
+
+    public void setUsePrayer(boolean usePrayer) {
+        this.usePrayer = usePrayer;
+    }
+
+    public void setPrayerNames(String[] prayerNames) {
+        this.prayerNames = prayerNames;
+    }
+
+    public void setCheckEquipment(boolean checkEquipment) {
+        this.checkEquipment = checkEquipment;
+    }
+
+    public void setUseAntiBan(boolean useAntiBan) {
+        this.useAntiBan = useAntiBan;
+    }
 }
